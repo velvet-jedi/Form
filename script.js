@@ -1,5 +1,12 @@
 const inputs = document.querySelectorAll('input');
 
+inputs.forEach(input => {
+    input.addEventListener('input', () => {
+        validateInputs(input);
+    });
+});
+
+
 const form = document.querySelector("form");
 
 const names = document.getElementById("name");
@@ -45,13 +52,13 @@ const setSuccess = el => {
       }
     const inputContainer = el.parentElement;
     const errorDisplay = inputContainer.querySelector('.error');
+    
 
     errorDisplay.innerText = '';
     errorDisplay.classList.add('success');
     errorDisplay.classList.remove('error');
     inputContainer.classList.add('success');
     inputContainer.classList.remove('error');
-    console.log(errorDisplay);
     
 }
 
