@@ -1,49 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration form</title>
 
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <h2 style="color: blueviolet">Fill out this form to create an account!</h2>
 
     <section id="form-container">
-      <form novalidate action="" method="post">
-        <div class="input-container">
-          <input type="text" placeholder="Name" id="name" />
-          <span class="error"></span>
-        </div>
+        <form novalidate action="" method="post">
 
-        <div class="input-container">
-          <input type="email" placeholder="Email" id="email" />
-          <span class="error"></span>
-        </div>
+            <div class="input-container">
+                <input type="text" placeholder="Name" id="name" />
+                <span class="error"></span>
+            </div>
 
-        <div class="input-container location">
-          <input type="text" placeholder="Country" id="country" />
-          <span class="error"></span>
-    
-          <input type="text" placeholder="Zip Code" id="zip-code" />
-          <span class="error"></span>
-        </div>
+            <div class="input-container">
+                <input type="email" placeholder="Email" id="email" />
+                <span class="error"></span>
+            </div>
 
-        <div class="input-container password">
-          <input type="password" placeholder="Password" id="password" />
-          <span class="error"></span>
-          
-          <input type="password" placeholder="Confirm Password" id="confirm-password" />
-          <span class="error"></span>
-        </div>
-        <button type="submit">Register Me!</button>
-        <p class="terms-of-service">
-          By clicking the button, you are agreeing to our
-          <a href="#">Terms and Services</a>
-        </p>
-      </form>
+            <div class="input-container">
+                <input type="text" placeholder="Country" id="country" />
+                <span class="error"></span>
+            </div>
+
+            <div class="input-container">
+                <input type="text" placeholder="Zip Code" id="zip-code" />
+                <span class="error"></span>
+            </div>
+
+            <div class="input-container">
+                <input type="password" placeholder="Password" id="password" />
+                <span class="error"></span>
+            </div>
+
+            <div class="input-container">
+                <input type="password" placeholder="Confirm Password" id="confirm-password" />
+                <span class="error"></span>
+            </div>
+
+            <button type="submit">Register Me!</button>
+            <p class="terms-of-service">
+                By clicking the button, you are agreeing to our
+                <a href="#">Terms and Services</a>
+            </p>
+        </form>
     </section>
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>

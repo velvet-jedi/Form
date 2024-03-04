@@ -17,10 +17,16 @@ body {
     padding: 2rem 1.5rem 0;
 }
 
+#form-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
 form {
     border-radius: 0.5rem;
     box-shadow: 0 0.4rem 0.06rem rgba(62, 60, 73, 0.3);
-    width: 20.5rem;
     padding: clamp(1rem, 5vw, 2rem);
     margin: 0 2rem;
     background-color: white;
@@ -28,21 +34,24 @@ form {
 
 form input,
 form button {
+
+    display: block;
     width: 100%;
     border-radius: 0.3rem;
     line-height: 2rem;
     padding-left: 0.5em;
     font-weight: 600;
-
-    font-family: inherit;
 }
 
 form .input-container {
-    display: flex;
-    margin-bottom: 20px;
+    display: grid;
+    margin-bottom: clamp(0.8rem, 3vw, 1.1rem);
 }
 
 form input {
+    grid-column: 1/span 2;
+    grid-row: 1;
+    font-weight: 600;
     border: 1px solid rgba(185, 182, 211, 0.7);
 }
 
@@ -90,25 +99,26 @@ form button:hover {
     box-shadow: 0 0.2rem #2fb67c;
   }
 
-.password {
-    display: flex;
-    flex-direction: row;
-    width: 40%;
+  
+form .error {
+    color: #ff7a7a;
+    font-style: italic;
+    
+    line-height: 10px;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-size: 0.8em;
+    margin-top: 10px;
+  }
+  
+  form input:invalid {
+    border: 2px solid #ff7a7a;
 }
 
-.input-container.location {
-    display: flex;
-    margin-bottom: 20px;
-    justify-content: space-between;
+form input:required:invalid::placeholder {
+    color: #ff7a7a;
 }
-
-.location input:first-child, .password input:first-child {
-    margin-right: 10px;
-}
-
-.input-container.password {
-    display: flex;
-    margin-bottom: 20px;
-    width: 100%;
-    justify-content: space-between;
+form input:invalid:focus {
+    box-shadow: 0 0 1px 1px #ff7a7a;
 }
