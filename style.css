@@ -100,7 +100,7 @@ form button:hover {
   }
 
   
-form .error {
+  .input-container .error {
     color: #ff7a7a;
     font-style: italic;
     
@@ -112,13 +112,12 @@ form .error {
     margin-top: 10px;
   }
   
-  form input:invalid {
-    border: 2px solid #ff7a7a;
+.input-container input:focus{
+    outline: 0;
+}  
+.input-container.success input {
+    border: 2px solid green;
 }
-
-form input:required:invalid::placeholder {
-    color: #ff7a7a;
-}
-form input:invalid:focus {
-    box-shadow: 0 0 1px 1px #ff7a7a;
+.input-container.error input {
+    border-color: #ff7a7a;
 }
