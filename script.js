@@ -51,7 +51,7 @@ const setSuccess = el => {
         return; // Exit if element or its parent is null
       }
     const inputContainer = el.parentElement;
-    const errorDisplay = inputContainer.querySelector('.error');
+    const errorDisplay = inputContainer.querySelector('.error') || inputContainer.querySelector('.success') ;
     
 
     errorDisplay.innerText = '';
@@ -118,5 +118,7 @@ const validateInputs = () => {
     }   else {
         setSuccess(confirm_password);
     }
+
+    
 
 }

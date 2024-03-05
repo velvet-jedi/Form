@@ -118,6 +118,10 @@ form button:hover {
 .input-container.success input {
     border: 2px solid green;
 }
-.input-container.error input {
+.input-container input:valid {
+    border-color: green;
+}
+.input-container.error input, .input-container:invalid {
     border-color: #ff7a7a;
 }
+
